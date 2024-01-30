@@ -108,7 +108,9 @@
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="task1.cpp" />
+    <ClCompile Include="task1.cpp">
+      <UseUnicodeForAssemblerListing Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</UseUnicodeForAssemblerListing>
+    </ClCompile>
     <ClCompile Include="task2.cpp" />
     <ClCompile Include="task3.cpp" />
     <ClCompile Include="task4.cpp" />
