@@ -18,7 +18,8 @@ void task2() {
     int countWater;
     int countMilk;
     int choice;
-    int bowl = 0;
+    int bowlAmericano = 0;
+    int bowlLate = 0;
 
     do {
         cout << "Введите количество воды в мл: ";
@@ -35,17 +36,26 @@ void task2() {
             if (countWater >= 300) {
                 cout << "Ваш напиток готов.";
                 countWater -= 300;
-                bowl ++;
+                bowlAmericano ++;
             } else if (countWater < 30 && countMilk < 270) {
                 cout << "Не хваттае ингридиентов";
-                breik;
+                break;
             } else {
                 cout << "не хватает воды, выберите другой кофе";
         else if (choice == 2){
-            if (countWater >= 30 && countMilk >= 270) cout << "Ваш напиток готов.";
+            if (countWater >= 30 && countMilk >= 270) {
+                cout << "Ваш напиток готов.";
+                bowlLate++;
+            }
         else {
             cout << "Не хваттае ингридиентов";
-            breik;
+            break;
         }
     }
+    cout << "*****Отчёт***** << endl;
+    cout << "Ингридиентов осталось" << endl;
+    cout << "Вода: " << countWater;
+    cout << "Молоко: " << countMilk << endl;
+    cout << "Кружек американо приготовлено: bowlAmericano";
+    cout << "Кружек латте приготовлено: bowlLate";
 }
