@@ -15,5 +15,38 @@ using namespace std;
 Если марсоход упёрся в стену, то он не должен пытаться перемещаться в сторону стены, в этом случае его позиция не меняется.*/
 
 void task3() {
-	cout << "task3лолололололожждждждж";
+	string user;
+	const int width = 14, height = 20, step = 1;
+	int x = 7, y = 10;
+
+	cout << "Марсоход находится в комнате, размером по оси X: " << width << " по оси Y: " << height << endl;
+
+	while (true)
+	{
+		cout << "Координаты нахождения марсохода по оси X: " << x << " по оси Y: " << y << endl;
+		cout << "В какую сторону оператор хочет направить робота: север (W), юг (S), Запад (A), восток (D),  для выхода нажмите 0 --> ";
+		cin >> user;
+
+		if (user == "w" || user == "W") {
+			if (y + step <= height) y++; 
+			else cout << "Робот упёрса в стену!" << endl;
+		}
+		else if (user == "d" || user == "D") {
+			if (x + step <= width) x++;
+			else cout << "Робот упёрса в стену!" << endl;
+		}
+		else if (user == "s" || user == "S") {
+			if (y - step >= 0) y--;
+			else cout << "Робот упёрса в стену!" << endl;
+		}
+		else if (user == "a" || user == "A") {
+			if (x - step >= 0) x--;
+			else cout << "Робот упёрса в стену!" << endl;
+		}
+		else if (user == "0") {
+			break;
+		}
+		else cout << "Некорректная команда!" << endl;
+	}
+	cout << "Завершение рабоы программы.....нажмите любую клавишу.....";
 }
