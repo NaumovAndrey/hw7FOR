@@ -1,4 +1,4 @@
-#include "pch.h"
+uh#include "pch.h"
 #include <clocale>
 #include "iostream"
 
@@ -36,11 +36,16 @@ void task2() {
                 cout << "Ваш напиток готов.";
                 countWater -= 300;
                 bowl ++;
+            } else if (countWater < 30 && countMilk < 270) {
+                cout << "Не хваттае ингридиентов";
+                breik;
             } else {
-                cout << "Не хватает воды";
-
-            }
-        else if (choice == 2 && countWater >= 30 && countMilk >= 270) cout << "Ваш напиток готов.";
-
-        
+                cout << "не хватает воды, выберите другой кофе";
+        else if (choice == 2){
+            if (countWater >= 30 && countMilk >= 270) cout << "Ваш напиток готов.";
+        else {
+            cout << "Не хваттае ингридиентов";
+            breik;
+        }
+    }
 }
