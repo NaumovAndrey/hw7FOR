@@ -16,16 +16,31 @@ using namespace std;
 
 void task2() {
     int countWater;
-	   cout << "Введите количество воды в мл: ";
-    cin >> countWater;
-
     int countMilk;
-    cout << "Введите количество молока в мл: ";
-    cin >> countMilk;
-
     int choice;
-    cout << "Выберите напиток (1 — американо, 2 — латте): ";
-    cin >> choice;
+    int bowl = 0;
 
-    
+    do {
+        cout << "Введите количество воды в мл: ";
+        cin >> countWater;
+
+        cout << "Введите количество молока в мл: ";
+        cin >> countMilk;
+    }
+    while (true) {
+        cout << "Выберите напиток (1 — американо, 2 — латте): ";
+        cin >> choice;
+
+        if (choice == 1){
+            if (countWater >= 300) {
+                cout << "Ваш напиток готов.";
+                countWater -= 300;
+                bowl ++;
+            } else {
+                cout << "Не хватает воды";
+
+            }
+        else if (choice == 2 && countWater >= 30 && countMilk >= 270) cout << "Ваш напиток готов.";
+
+        
 }
