@@ -9,5 +9,26 @@ using namespace std;
 ƒл€ вертикальных линий используйте символ вертикального штриха Ђ|ї,
 а дл€ горизонтальных Ч дефис Ђ-ї. ѕусть пользователь вводит ширину и высоту рамки.*/
 void task4() {
-	cout << "task4";
+    int width, height;
+
+    cout << "¬ведите ширину и высоту рамки через пробел: ";
+    cin >> width >> height;
+
+    for (int i = 0; i < width; i++) {
+        cout << "-";
+    }
+    cout << endl;
+
+    for (int i = 0; i < height - 2; i++) {
+        cout << "|";
+        for (int j = 0; j < width - 2; j++) {
+            cout << " ";
+        }
+        cout << "|" << endl;
+    }
+
+    for (int i = 0; i < width; i++) {
+        cout << "-";
+    }
+    cout << endl;
 }
